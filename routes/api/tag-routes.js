@@ -51,6 +51,17 @@ router.get('/:id', (req, res) => {
       }
     ]
   })
+    .then(dbTagData => {
+      if (!dbTagData) {
+        res.status(404).json({ message: 'No tag found with this id' }) // HTTP: not found
+        return;
+      }
+      res.json(dbTagData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err); // HTTP: internal server error
+    });
 });
 
 router.post('/', (req, res) => {
