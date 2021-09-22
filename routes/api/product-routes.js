@@ -12,25 +12,13 @@ router.get('/', (req, res) => {
     include: [
       {
         model: Category,
-        where: {
-          id: Sequelize.col('product.category_id')
-        }
       },
       {
-        model: ProductTag,
-        attributes: {
-          exclude: ['id', 'product_id', 'tag_id']
-        },
-        where: {
-          product_id: Sequelize.col('product.id')
-        },
+        model: Tag,
         include: {
-          model: Tag,
-          where: {
-            id: Sequelize.col('product_tag.tag_id')
-          } 
+          model: ProductTag
         }
-      }
+      },
     ]
   })
     .then(dbProductData => res.json(dbProductData))
@@ -51,25 +39,13 @@ router.get('/:id', (req, res) => {
     include: [
       {
         model: Category,
-        where: {
-          id: Sequelize.col('product.category_id')
-        }
       },
       {
-        model: ProductTag,
-        attributes: {
-          exclude: ['id', 'product_id', 'tag_id']
-        },
-        where: {
-          product_id: Sequelize.col('product.id')
-        },
+        model: Tag,
         include: {
-          model: Tag,
-          where: {
-            id: Sequelize.col('product_tag.tag_id')
-          } 
+          model: ProductTag
         }
-      }
+      },
     ]
   })
     .then(dbProductData => {
