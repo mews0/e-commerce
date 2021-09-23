@@ -5,9 +5,9 @@
 A back end for an e-commerce site.
 
 ## Table of Contents
-
 * [Installation](#installation)
 * [Usage](#usage)
+* [Video](#video)
 * [License](#license)
 * [GitHub](#github)
 
@@ -22,6 +22,9 @@ A back end for an e-commerce site.
 4. Type `npm run seed` to seed database.
 5. Type `npm start` to start Express server.
 6. Open [Insomnia](https://insomnia.rest/download) to test API routes.
+
+## Video
+https://watch.screencastify.com/v/6bHDT2dlq3UusuLyljjM
 
 ## License
 [MIT License](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
