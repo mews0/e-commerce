@@ -26,7 +26,7 @@ This application requires the following [Node.js](https://nodejs.org/en/) packag
 
 ## Usage
 1. Log into [MySQL](https://www.mysql.com/downloads/) from VS Code terminal.
-2. Type `db/schema.sql` and press enter to create database.
+2. Type `source db/schema.sql;` and press enter to create database.
 3. Type `quit;` and press enter to log out of MySQL.
 4. Type `npm run seed` to seed database.
 5. Type `npm start` to start Express server.
